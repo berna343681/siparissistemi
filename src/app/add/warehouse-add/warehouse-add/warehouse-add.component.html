@@ -1,0 +1,29 @@
+<div class="fullscreen-container">
+  <div class="form-container">
+    <h2>Depo Ekle </h2> <!-- Form Başlığı -->
+    <form [formGroup]="warehouseAddForm" (ngSubmit)="add()">
+     <!-- <div class="form-group">
+        <label for="wareHouseId">warehouseId</label>
+        <input type="number" formControlName="wareHouseId" class="form-control" id="wareHouseId" />
+      </div> -->
+      <div class="form-group">
+        <label for="productId">productId</label>
+        <input type="number" formControlName="productId" class="form-control" id="productId" />
+      </div>
+      <div class="form-group">
+        <label for="quantity">quantity </label>
+        <input type="number" formControlName="quantity" class="form-control" id="quantity" />
+      </div>
+      <div class="form-group">
+        <label for="isReadyForSale">Is Ready For Sale</label>
+        <select formControlName="isReadyForSale" class="form-control" id="isReadyForSale">
+          <option [value]="true">Evet</option>
+          <option [value]="false">Hayır</option>
+        </select>
+      </div>
+      
+      
+      <button type="submit" class="btn btn-primary" [disabled]="!warehouseAddForm.valid">Ekle</button>
+    </form>
+  </div>
+  

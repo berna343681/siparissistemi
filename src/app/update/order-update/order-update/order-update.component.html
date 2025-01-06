@@ -1,0 +1,38 @@
+<div class="fullscreen-container">
+  <div class="form-container">
+    <form [formGroup]="orderUpdateForm" (ngSubmit)="updateOrder()">
+      <h2>Sipariş Güncelle</h2>
+
+      <div class="form-group">
+        <label for="createdUserId">createdUserId</label>
+        <input type="text" formControlName="createdUserId" class="form-control" id="createdUserId" />
+      </div>
+
+      <label for="lastUpdatedUserId">lastUpdatedUserId</label>
+      <input type="text" formControlName="lastUpdatedUserId" class="form-control" id="lastUpdatedUserId" />
+
+
+      <div class="form-group">
+        <label for="orderId">orderId</label>
+        <input type="number" formControlName="orderId" class="form-control" id="orderId" />
+      </div>
+
+      <div class="form-group">
+        <label for="customerId">customerId</label>
+        <input type="number" formControlName="customerId" class="form-control" id="customerId" />
+      </div>
+
+      <div class="form-group">
+        <label for="customerId">productId</label>
+        <input type="productId" formControlName="productId" class="form-control" id="productId" />
+      </div>
+
+      <div class="form-group">
+        <label for="quantity">quantity</label>
+        <input type="number" formControlName="quantity" class="form-control" id="quantity" />
+      </div>
+
+      <button type="submit" class="btn btn-primary" (click)="updateOrder()">Update</button>
+    </form>
+  </div>
+  

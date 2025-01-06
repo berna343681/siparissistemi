@@ -1,0 +1,68 @@
+<div class="fullscreen-container">
+  <div class="form-container">
+    <h2>Depo  Güncelle</h2>
+    <form [formGroup]="warehouseUpdateForm" (ngSubmit)="updateWarehouse()">
+      <div class="form-group">
+        <label for="createdUserId">createdUserId</label>
+        <input
+          type="number"
+          id="createdUserId"
+          formControlName="createdUserId"
+          class="form-control"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="lastUpdatedUserId">lastUpdatedUserId</label>
+        <input
+          type="number"
+          id="lastUpdatedUserId"
+          formControlName="lastUpdatedUserId"
+          class="form-control"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="wareHouseId">wareHouseId</label>
+        <input
+          type="number"
+          id="wareHouseId"
+          formControlName="wareHouseId"
+          class="form-control"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="productId">productId</label>
+        <input
+          type="number"
+          id="productId"
+          formControlName="productId"
+          class="form-control"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="quantity">quantity</label>
+        <input
+          type="number"
+          id="quantity"
+          formControlName="quantity"
+          class="form-control"
+          required />
+      </div>
+      <div class="form-group">
+        <label for="isReadyForSale">Is Ready For Sale</label>
+        <select formControlName="IsReadyForSale" id="IsReadyForSale" class="form-control">
+          <option [ngValue]="true">Evet</option>
+          <option [ngValue]="false">Hayır</option>
+        </select>
+      </div>
+      
+      
+      <button type="submit" class="btn btn-primary" [disabled]="!warehouseUpdateForm.valid">
+        Güncelle
+      </button>
+    </form>
+  </div>
+  

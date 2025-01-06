@@ -1,0 +1,37 @@
+/* Navbar için stil */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  /* Sidebar için stil */
+  .sidebar {
+    width: 250px;
+    height: 100vh; /* Tam ekran yüksekliği */
+    position: fixed;
+    top: 57px; /* Navbar yüksekliği kadar yukarıda */
+    left: 0;
+    background-color: #323b45; /* Sidebar arka plan rengi (dark theme) */
+    padding-top: 1rem;
+  }
+  
+  .sidebar .nav-link {
+    color: #ffffff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .sidebar .nav-link.active {
+    background-color: #747b81; /* Aktif bağlantı arka plan rengi */
+  }
+  
+  .sidebar .nav-link:hover {
+    background-color: #1e1e1e; /* Üzerine gelindiğinde arka plan rengi */
+    color: #ffffff; /* Üzerine gelindiğinde yazı rengi */
+  }
+  
+  .sidebar .nav-link:active {
+    background-color: #000000; /* Tıklandığında arka plan rengi */
+    color: #ffffff; /* Tıklandığında yazı rengi */
+  }

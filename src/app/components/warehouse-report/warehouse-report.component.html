@@ -1,0 +1,74 @@
+<div class="container">
+  <div class="table-container">
+  <table mat-table [dataSource]="warehouses" matSort class="full-width-table">
+
+    <!-- createdUserId Column -->
+    <ng-container matColumnDef="createdUserId">
+      <th mat-header-cell *matHeaderCellDef> Created User ID </th>
+      <td mat-cell *matCellDef="let warehouse"> {{warehouse.createdUserId}} </td>
+    </ng-container>
+
+    <!-- createdDate Column -->
+    <ng-container matColumnDef="createdDate">
+      <th mat-header-cell *matHeaderCellDef> Created Date </th>
+      <td mat-cell *matCellDef="let warehouse"> {{warehouse.createdDate | date:'short'}} </td>
+    </ng-container>
+
+    <!-- lastUpdatedUserId Column -->
+    <ng-container matColumnDef="lastUpdatedUserId">
+      <th mat-header-cell *matHeaderCellDef> Last Updated User ID </th>
+      <td mat-cell *matCellDef="let warehouse"> {{warehouse.lastUpdatedUserId}} </td>
+    </ng-container>
+
+    <!-- lastUpdatedDate Column -->
+    <ng-container matColumnDef="lastUpdatedDate">
+      <th mat-header-cell *matHeaderCellDef> Last Updated Date </th>
+      <td mat-cell *matCellDef="let warehouse"> {{warehouse.lastUpdatedDate | date:'short'}} </td>
+    </ng-container>
+
+    <!-- status Column -->
+    <ng-container matColumnDef="status">
+      <th mat-header-cell *matHeaderCellDef> Status </th>
+      <td mat-cell *matCellDef="let warehouse"> {{warehouse.status}} </td>
+    </ng-container>
+
+    <!-- isDeleted Column -->
+    <ng-container matColumnDef="isDeleted">
+      <th mat-header-cell *matHeaderCellDef> Is Deleted </th>
+      <td mat-cell *matCellDef="let warehouse"> {{warehouse.isDeleted}} </td>
+    </ng-container>
+
+    <!-- wareHouseId Column -->
+    <ng-container matColumnDef="wareHouseId">
+      <th mat-header-cell *matHeaderCellDef> Warehouse ID </th>
+      <td mat-cell *matCellDef="let warehouse"> {{warehouse.wareHouseId}} </td>
+    </ng-container>
+
+    <!-- productId Column -->
+    <ng-container matColumnDef="productId">
+      <th mat-header-cell *matHeaderCellDef> Product ID </th>
+      <td mat-cell *matCellDef="let warehouse"> {{warehouse.productId}} </td>
+    </ng-container>
+
+    <!-- quantity Column -->
+    <ng-container matColumnDef="quantity">
+      <th mat-header-cell *matHeaderCellDef> Quantity </th>
+      <td mat-cell *matCellDef="let warehouse"> {{warehouse.quantity}} </td>
+    </ng-container>
+
+    <!-- isReadyForSale Column -->
+    <ng-container matColumnDef="isReadyForSale">
+      <th mat-header-cell *matHeaderCellDef> Ready for Sale </th>
+      <td mat-cell *matCellDef="let warehouse"> {{warehouse.isReadyForSale}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+  <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+</div>
+</div>
+
+  
+  

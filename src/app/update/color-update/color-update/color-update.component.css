@@ -1,0 +1,91 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #ffffff; /* Arka plan rengini beyaz yap */
+  }
+  
+  .fullscreen-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Sağ tarafa hizala */
+    height: 50vh; /* Tüm yüksekliği kapla */
+    background-color: transparent; /* Arka plan rengini kaldır */
+    margin: 0; /* Yan ve üst-alt boşlukları kaldır */
+    padding: 0;
+  }
+  
+  .container {
+    display: flex; /* Flexbox kullanarak ortala */
+    justify-content: center; /* Yatayda ortala */
+    align-items: center; /* Dikeyde ortala */
+    height: 100%; /* Yüksekliği %100 yap */
+    padding: 0 20px; /* Yan boşlukları ekle */
+  }
+  
+  .form-container {
+    background-color: #ffffff; /* Form arka plan rengi */
+    padding: 30px;
+    border-radius: 10px; /* Köşeleri yuvarlat */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Gölgelendirme */
+    max-width: 500px;
+    width: 100%;
+    margin: 0; /* Kenarlardan ortalama kaldırıldı */
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333; /* Başlık rengi */
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    color: #666; /* Etiket rengi */
+    font-weight: bold;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd; /* Kenarlık rengi */
+    border-radius: 5px; /* Köşeleri yuvarlat */
+    font-size: 16px;
+    transition: border-color 0.3s; /* Geçiş efekti */
+  }
+  
+  .form-control:focus {
+    border-color: #007bff; /* Odaklanıldığında kenarlık rengi */
+    outline: none;
+  }
+  
+  textarea.form-control {
+    resize: none; /* Textarea boyutunu sabit tut */
+  }
+  
+  .btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff; /* Buton arka plan rengi */
+    border: none;
+    border-radius: 5px; /* Köşeleri yuvarlat */
+    color: #fff; /* Buton metin rengi */
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Geçiş efekti */
+  }
+  
+  .btn:hover {
+    background-color: #0056b3; /* Hover durumunda arka plan rengi */
+  }
+  
+  .btn:disabled {
+    background-color: #ccc; /* Disabled durumunda arka plan rengi */
+    cursor: not-allowed; /* Cursor şekli değiştir */
+  }

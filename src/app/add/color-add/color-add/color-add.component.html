@@ -1,0 +1,11 @@
+<h1 mat-dialog-title>Renk Seç</h1>
+<div mat-dialog-content>
+  <mat-list>
+    <mat-list-item *ngFor="let color of colors" (click)="selectColor(color)">
+      <div>{{ color.name }} (ID: {{ color.colorId }})</div>
+    </mat-list-item>
+  </mat-list>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="dialogRef.close()">Kapat</button>
+</div>

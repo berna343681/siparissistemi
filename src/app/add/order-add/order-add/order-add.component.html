@@ -1,0 +1,35 @@
+<div class="fullscreen-container">
+  <div class="form-container">
+    <form [formGroup]="orderAddForm" (ngSubmit)="add()">
+      <h2>Sipariş Ekle</h2>
+
+      <div class="form-group">
+        <label for="lastUpdatedUserId">lastUpdatedUserId</label>
+        <input type="number" formControlName="lastUpdatedUserId" class="form-control" id="lastUpdatedUserId" />
+      </div>
+
+      <div class="form-group">
+        <label for="orderId">orderId</label>
+        <input type="number" formControlName="orderId" class="form-control" id="orderId" />
+      </div>
+
+      <div class="form-group">
+        <label for="customerId">customerId</label>
+        <input type="number" formControlName="customerId" class="form-control" id="customerId" />
+      </div>
+
+      <div class="form-group">
+        <label for="productId">productId</label>
+        <input type="number" formControlName="productId" class="form-control" id="productId" />
+      </div>
+
+      
+      <div class="form-group">
+        <label for="quantity">quantity</label>
+        <input type="number" formControlName="quantity" class="form-control" id="quantity" />
+      </div>
+
+
+      <button type="submit" class="btn btn-primary" [disabled]="!orderAddForm.valid">Add</button>
+    </form>
+  </div>

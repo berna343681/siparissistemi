@@ -1,0 +1,22 @@
+.full-width-table {
+  width: 200%;
+  margin-top: 20px;
+}
+.table-wrapper {
+  display: flex;
+  justify-content: flex-end;  /* Sağ tarafa hizalar */
+  align-items: flex-start;    /* Yukarı hizalar */
+  padding-top: 10px;          /* Yukarıdan biraz boşluk bırakır */
+  padding-right: 10px;        /* Sağdan biraz boşluk bırakır */
+  height: 150%;               /* Container yüksekliğini ayarlar */
+}
+
+.mat-elevation-z8 {
+  width: auto;
+  max-width: 200%;  /* Tablo genişliği container'a göre ayarlanır, isteğe göre ayarlanabilir */
+}
+
+.container{
+  padding: 30px;
+    margin-left: 30px;
+}

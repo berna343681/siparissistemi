@@ -1,0 +1,79 @@
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  position: fixed;
+  top: 57px;
+  left: 0;
+  background-color: #5e86af;
+  padding-top: 1rem;
+}
+
+/* Sidebar yazı stil ayarları */
+.sidebar .nav-link {
+  color: #ffffff;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-size: 20px; /* Yazı boyutunu artır */
+  padding: 5px 10px; /* Maddeler arasında boşluk ekle */
+}
+
+
+/* Alt başlıkları sağa hizalamak için */
+.sidebar .btn-toggle-nav .link-light {
+  text-align: right; /* Metni sağa hizalar */
+  display: block; /* Blok olarak ayarlar */
+  padding-left: 4rem; /* Sağ tarafa boşluk ekler */
+  font-size: 18px; /* Yazı boyutunu artır */
+  
+}
+
+.sidebar .nav-item {
+  margin-bottom: 1px; /* Her menü arasında boşluk ekleyelim */
+}
+
+.sidebar .nav-link {
+  color: #ffffff;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sidebar .nav-link.active {
+  background-color: #747b81; /* Aktif bağlantı arka plan rengi */
+}
+
+.sidebar .nav-link:hover {
+  background-color: #bab1b1; /* Üzerine gelindiğinde arka plan rengi */
+  color: #ffffff; /* Üzerine gelindiğinde yazı rengi */
+}
+
+.sidebar .nav-link:active {
+  background-color: #4a1b1b; /* Tıklandığında arka plan rengi */
+  color: #ffffff; /* Tıklandığında yazı rengi */
+}
+
+/* İçerik için stil */
+.content {
+  margin-left: 250px;
+  margin-top: 56px;
+  padding: 20px;
+  flex-grow: 1;
+  background-color: #ffffff;
+  min-height: calc(100vh - 56px);
+}
+
+/* Responsive tasarım için medya sorguları */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  .content {
+    margin-left: 0;
+    margin-top: 0;
+  }
+}
+
+/* Üzerine gelindiğinde altı çizili yap */
+.sidebar .btn-toggle-nav .link-light:hover {
+  text-decoration: underline;
+}

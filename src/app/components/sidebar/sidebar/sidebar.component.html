@@ -1,0 +1,106 @@
+<!-- Sidebar -->
+<div class="col-md-2 sidebar bg-dark">
+  <ul class="nav flex-column">
+    <li class="nav-item">
+      <a class="nav-link text-white" href="/">
+        <img src="assets/images/ccc.png" alt="Company Logo" style="height: 130px;">
+      </a>
+    </li>
+    <li class="nav-item">
+      <button 
+        class="btn btn-toggle text-white d-inline-flex align-items-center rounded border-0"
+        (click)="toggleMenu('userManagement')"> <li class="nav-item">
+          <a class="nav-link " [routerLink]="['/user-management']">User </a>
+        </li>
+      </button>
+      <div *ngIf="!userManagementCollapsed">
+        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+          <li><a class="link-light d-inline-flex text-decoration-none rounded"  [routerLink]="['/user-add']">User Add</a></li>
+          <li><a class="link-light d-inline-flex text-decoration-none rounded"  [routerLink]="['/user-delete']">User Delete</a></li>
+          <li><a class="link-light d-inline-flex text-decoration-none rounded"  [routerLink]="['/user-update']">User Update</a></li>
+        </ul>
+      </div>
+    </li>
+    
+    <li class="nav-item">
+      <button 
+        class="btn btn-toggle text-white d-inline-flex align-items-center rounded border-0"
+        (click)="toggleMenu('customerManagement')">
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/customer-management']">Customer </a>
+        </li>
+      </button>
+      <div *ngIf="!customerManagementCollapsed">
+        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+        
+          <li><a class="link-light d-inline-flex text-decoration-none rounded" [routerLink]="['/customer-add']">Customer Add</a></li>
+          <li><a class="link-light d-inline-flex text-decoration-none rounded" [routerLink]="['/customer-delete']">Customer Delete</a></li>
+          <li><a class="link-light d-inline-flex text-decoration-none rounded" [routerLink]="['/customer-update']">Customer Update</a></li>
+        </ul>
+      </div>
+    </li>
+    <li class="nav-item">
+      <button 
+        class="btn btn-toggle text-white d-inline-flex align-items-center rounded border-0"
+        (click)="toggleMenu('productManagement')">
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/product-management']">Product </a>
+        </li>
+      </button>
+      <div *ngIf="!productManagementCollapsed">
+        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+          <li><a class="link-light d-inline-flex text-decoration-none rounded" [routerLink]="['/product-add']">Product Add</a></li>
+          <li><a class="link-light d-inline-flex text-decoration-none rounded" [routerLink]="['/product-delete']">Product Delete</a></li>
+          <li><a class="link-light d-inline-flex text-decoration-none rounded" [routerLink]="['/product-update']">Product Update</a></li>
+          <li><a class="link-light d-inline-flex text-decoration-none rounded" [routerLink]="['/color-addd']">Color Add</a></li>
+          <li><a class="link-light d-inline-flex text-decoration-none rounded" [routerLink]="['/color-delete']">Color Delete</a></li>
+          <li><a class="link-light d-inline-flex text-decoration-none rounded" [routerLink]="['/color-update']">Color Update</a></li>
+        </ul>
+      </div>
+    </li>
+    
+    <li class="nav-item">
+      <button 
+        class="btn btn-toggle text-white d-inline-flex align-items-center rounded border-0"
+        (click)="toggleMenu('orderManagement')">
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/order-management']">Order </a>
+        </li>
+      </button>
+      <div *ngIf="!orderManagementCollapsed">
+        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+
+          <!--<li><a class="link-light d-inline-flex text-decoration-none rounded" href="#" >Sipariş Listele</a></li>-->
+          <li><a class="link-light d-inline-flex text-decoration-none rounded"  [routerLink]="['/order-add']">Order Add</a></li>
+          <li><a class="link-light d-inline-flex text-decoration-none rounded"  [routerLink]="['/order-delete']">Order Delete</a></li>
+          <li><a class="link-light d-inline-flex text-decoration-none rounded"  [routerLink]="['/order-update']">Order Update</a></li>
+        </ul>
+      </div>
+    </li>
+    <li class="nav-item">
+      <button 
+        class="btn btn-toggle text-white d-inline-flex align-items-center rounded border-0"
+        (click)="toggleMenu('warehouseReport')">
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/warehouse-report']">Warehouse </a>
+        </li>
+      </button>
+      <div *ngIf="!warehouseReportCollapsed">
+        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+
+          <li><a class="link-light d-inline-flex text-decoration-none rounded" [routerLink]="['/warehouse-add']"> Warehouse Add</a></li>
+          <li><a class="link-light d-inline-flex text-decoration-none rounded" [routerLink]="['/warehouse-delete']">Warehouse Delete</a></li>
+          <li><a class="link-light d-inline-flex text-decoration-none rounded" [routerLink]="['/warehouse-update']">Warehouse Update</a></li>
+        </ul>
+      </div>
+    </li>
+   
+  </ul>
+</div>
+
+<!-- Main content -->
+<div class="col-md-10 content">
+  <router-outlet></router-outlet>
+</div>
+
+

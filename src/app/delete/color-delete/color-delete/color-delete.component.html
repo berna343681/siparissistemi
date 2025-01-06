@@ -1,0 +1,12 @@
+<div class="container mt-5">
+  <div class="form-container">
+    <h2>Renk Sil</h2>
+    <form (ngSubmit)="deleteColor()">
+      <div class="form-group">
+        <label for="name">Renk Adı</label>
+        <input type="text" id="name" [(ngModel)]="name" name="name" class="form-control" required />
+      </div>
+      <button type="submit" class="btn btn-danger">Sil</button>
+    </form>
+  </div>
+  

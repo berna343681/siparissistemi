@@ -1,0 +1,38 @@
+<div>
+    <h2>Sipariş Listesi</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Müşteri ID</th>
+          <th>Ürün ID</th>
+          <th>Miktar</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let order of orders">
+          <td>{{ order.orderId }}</td>
+          <td>{{ order.customerId }}</td>
+          <td>{{ order.productId }}</td>
+          <td>{{ order.quantity }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  <div>
+    <h2>Yeni Sipariş Ekle</h2>
+    <form (ngSubmit)="add()">
+      <label for="customerId">Müşteri ID:</label>
+      <input type="number" [(ngModel)]="newOrder.customerId" name="customerId" required>
+      <br>
+      <label for="productId">Ürün ID:</label>
+      <input type="number" [(ngModel)]="newOrder.productId" name="productId" required>
+      <br>
+      <label for="quantity">Miktar:</label>
+      <input type="number" [(ngModel)]="newOrder.quantity" name="quantity" required>
+      <br>
+      <button type="submit">Sipariş Ekle</button>
+    </form>
+  </div>
+  
